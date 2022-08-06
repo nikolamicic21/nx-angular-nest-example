@@ -1,9 +1,17 @@
 <div style="text-align: center">
+  <ng-container *ngIf="(isAuthenticated$ | async) === false; else signout">
+    <button (click)="signIn()">Sign in</button>
+  </ng-container>
+
+  <ng-template #signout>
+    <button (click)="signOut()">Sign out</button>
+  </ng-template>
+
   <h1>Welcome to nx-angular-nest-example!</h1>
   <img
-    width="450"
-    src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png"
     alt="Nx - Smart, Fast and Extensible Build System"
+    src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png"
+    width="450"
   />
 </div>
-<div>Message: {{ hello$ | async | json }}</div>
+<router-outlet></router-outlet>

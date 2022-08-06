@@ -6,4 +6,8 @@ export class AppService {
   getData(): Message {
     return { message: 'Welcome to api!' };
   }
+
+  getAdminData(): Message {
+    return { message: 'Welcome to Admin api!' };
+  }
 }

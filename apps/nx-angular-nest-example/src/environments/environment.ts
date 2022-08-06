@@ -4,6 +4,11 @@
 
 export const environment = {
   production: false,
+  apiUrl: 'http://localhost:3333',
+  okta: {
+    issuer: 'https://dev-71090791.okta.com/oauth2/default',
+    clientId: '0oa631ketpmrVmXK15d7',
+  },
 };
 
 /*
