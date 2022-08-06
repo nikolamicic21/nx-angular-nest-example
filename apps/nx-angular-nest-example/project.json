@@ -7,7 +7,7 @@
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/nx-angular-nest-example",
+        "outputPath": "dist",
         "index": "apps/nx-angular-nest-example/src/index.html",
         "main": "apps/nx-angular-nest-example/src/main.ts",
         "polyfills": "apps/nx-angular-nest-example/src/polyfills.ts",
