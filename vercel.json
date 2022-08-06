@@ -1,5 +1,16 @@
 {
   "version": 2,
   "name": "nx-angular-nest-example",
-  "rewrites": [{ "source": "/api/(.*)", "destination": "/api" }]
+  "builds": [
+    {
+      "src": "dist/main.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "dist/main.js"
+    }
+  ]
 }
