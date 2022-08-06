@@ -1,16 +1,17 @@
 {
   "version": 2,
   "name": "nx-angular-nest-example",
+  "builds": [
+    {
+      "src": "apps/api/src/main.ts",
+      "use": "@vercel/node"
+    }
+  ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "dist/apps/api/index.js",
-      "methods": [
-        "GET",
-        "POST",
-        "PUT",
-        "DELETE"
-      ]
+      "dest": "/main.js",
+      "methods": ["GET", "POST", "PUT", "DELETE"]
     }
   ]
 }
